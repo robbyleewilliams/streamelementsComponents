@@ -1,0 +1,121 @@
+* {
+    font-family: 'Calibri', sans-serif;
+    color: {{fontColor}};
+    font-size: 14px;
+    overflow: hidden;
+}
+
+#main-container {
+    background: rgb(83,0,95);
+    background: linear-gradient(
+        0deg,
+        rgba(83,0,95,1) 0%,
+        rgba(166,34,177,1) 50%,
+        rgba(171,0,255,1) 100%);
+    height: 60px;
+    width: 100%;
+}
+
+#main-container > div {
+    height: 20px;
+    padding: 5px;
+}
+
+#header {
+    text-align: center;
+}
+
+.fadeOutClass{
+    animation: fadeOut 1s;
+    animation-delay:{{fadeoutTime}}s;
+    animation-fill-mode: forwards;
+}
+
+/* by https://codepen.io/jamesbarnett/pen/kfmKa */
+.marquee {
+    width: 360px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee div {
+    display: block;
+    width: 200%;
+    position: absolute;
+    overflow: hidden;
+    animation: 1.2s fade-in, marquee 5s linear infinite;
+}
+
+.marquee span {
+    float: left;
+    width: 50%;
+}
+
+@keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes pop-in {
+    0% {
+        width: 0px;
+        height: 0px;
+        background-size: 0px 0px;
+        margin-top: 23px;
+        margin-left: 24px;
+    }
+    50% {
+        width: 0px;
+        height: 0px;
+        background-size: 0px 0px;
+        margin-top: 12px;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 12px
+    }
+    85% {
+        width: 23px;
+        height: 23px;
+        background-size: 23px 23px;
+        margin-top: 1px;
+        margin-left: 2px;
+        margin-right: 0px;
+        margin-bottom: 0px
+    }
+    100% {
+        width: 21px;
+        height: 21px;
+        background-size: 21px 21px;
+        margin-top: 2px;
+        margin-left: 3px;
+    }
+}
